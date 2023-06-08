@@ -3,7 +3,7 @@ package com.tj.bi_backend.controller;
 import com.tj.bi_backend.entity.CategoryInterest;
 import com.tj.bi_backend.entity.CategoryPopularity;
 import com.tj.bi_backend.entity.DTO.CPDTO;
-import com.tj.bi_backend.entity.DTO.NPDTO;
+import com.tj.bi_backend.entity.DTO.PopularityDTO;
 import com.tj.bi_backend.entity.NewsPopularity;
 import com.tj.bi_backend.entity.UserInterest;
 import com.tj.bi_backend.result.Result;
@@ -13,11 +13,8 @@ import com.tj.bi_backend.service.INPService;
 import com.tj.bi_backend.service.IUIService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import static com.tj.bi_backend.utils.TimeUtils.timeTransfer;
 
@@ -43,9 +40,9 @@ public class HistoryController {
             return Result.error();
         }
 
-        List<NPDTO> resultList = new ArrayList<>();  //将数据处理为前端需要的格式
+        List<PopularityDTO> resultList = new ArrayList<>();  //将数据处理为前端需要的格式
         for(NewsPopularity np : npList){
-            NPDTO npdto = new NPDTO();
+            PopularityDTO npdto = new PopularityDTO();
             npdto.setDate(timeTransfer(np.getDate()));
             npdto.setClickTimes(np.getClickTimes());
             resultList.add(npdto);
@@ -63,13 +60,21 @@ public class HistoryController {
             return Result.error();
         }
 
-        List<CPDTO> resultList = new ArrayList<>();  //将数据处理为前端需要的格式
+        Map<String, List<PopularityDTO>> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储
         for(CategoryPopularity cp : cpList){
-            CPDTO cpdto = new CPDTO();
-            cpdto.setCategory(cp.getCategory());
-            cpdto.setDate(timeTransfer(cp.getDate()));
-            cpdto.setClickTimes(cp.getClickTimes());
-            resultList.add(cpdto);
+            PopularityDTO tmp = new PopularityDTO();  //新建要插入的数据
+            tmp.setDate(timeTransfer(cp.getDate()));
+            tmp.setClickTimes(cp.getClickTimes());
+
+            String category = cp.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
+            if(resultList.containsKey(category)){
+                resultList.get(category).add(tmp);
+            }
+            else{
+                List<PopularityDTO> tmpList = new ArrayList<>();
+                tmpList.add(tmp);
+                resultList.put(category, tmpList);
+            }
         }
 
         return Result.success(resultList);
