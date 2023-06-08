@@ -1,0 +1,31 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #MySql?url
+    url: jdbc:mysql://110.42.189.226:3306/BI_DATABASE?serverTimezone=GMT%2b8
+    #???????
+    username: yfy
+    #?????
+    password: yfy123
+  #  ??????
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+mybatis:
+  mapper-locations: classpath:mapper/xml/*.xml
+
+mybatis-plus:
+  check-config-location:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+    mvc:
+      path match:
+        matching-strategy: ant_path_matcher
+
+
