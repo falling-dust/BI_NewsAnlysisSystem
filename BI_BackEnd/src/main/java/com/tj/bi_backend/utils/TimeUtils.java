@@ -10,13 +10,13 @@ import java.util.Date;
 import java.util.Locale;
 
 public class TimeUtils {
-    public static String timeTransfer(Timestamp timeStamp){
+    public static String timestampToString(Timestamp timeStamp){
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         String sd = sdf.format(timeStamp);      // 时间戳转换成时间
         return sd;
     }
 
-    public static Date stringTransfer(String oldDateStr) {
+    public static Date stringToDate(String oldDateStr) {
         if (StringUtils.isBlank(oldDateStr)){
             return null;
         }
