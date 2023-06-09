@@ -15,8 +15,8 @@ import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
-import static com.tj.bi_backend.utils.TimeUtils.stringTransfer;
-import static com.tj.bi_backend.utils.TimeUtils.timeTransfer;
+import static com.tj.bi_backend.utils.TimeUtils.stringToDate;
+import static com.tj.bi_backend.utils.TimeUtils.timestampToString;
 
 @RestController
 @RequestMapping("/history")
@@ -43,7 +43,7 @@ public class HistoryController {
         List<PopularityDTO> resultList = new ArrayList<>();  //将数据处理为前端需要的格式
         for(NewsPopularity np : npList){
             PopularityDTO npdto = new PopularityDTO();
-            npdto.setDate(timeTransfer(np.getDate()));
+            npdto.setDate(timestampToString(np.getDate()));
             npdto.setClickTimes(np.getClickTimes());
             resultList.add(npdto);
         }
@@ -55,7 +55,7 @@ public class HistoryController {
             @RequestParam("startTime") String startTime,
             @RequestParam("endTime") String endTime
     ){
-        List<CategoryPopularity> cpList = cpService.getByTime(stringTransfer(startTime), stringTransfer(endTime));  //获取所有的类别兴趣度数据
+        List<CategoryPopularity> cpList = cpService.getByTime(stringToDate(startTime), stringToDate(endTime));  //获取所有的类别兴趣度数据
         if(cpList.isEmpty()){
             return Result.error();
         }
@@ -63,7 +63,7 @@ public class HistoryController {
         Map<String, List<PopularityDTO>> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储
         for(CategoryPopularity cp : cpList){
             PopularityDTO tmp = new PopularityDTO();  //新建要插入的数据
-            tmp.setDate(timeTransfer(cp.getDate()));
+            tmp.setDate(timestampToString(cp.getDate()));
             tmp.setClickTimes(cp.getClickTimes());
 
             String category = cp.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
