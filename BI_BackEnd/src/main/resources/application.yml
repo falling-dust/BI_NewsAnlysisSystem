@@ -24,8 +24,3 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
-    mvc:
-      path match:
-        matching-strategy: ant_path_matcher
-
-

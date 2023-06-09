@@ -60,20 +60,16 @@ public class HistoryController {
             return Result.error();
         }
 
-        Map<String, List<PopularityDTO>> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储
+        Map<String, Integer> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储.前面为category，后面为总流行度
         for(CategoryPopularity cp : cpList){
-            PopularityDTO tmp = new PopularityDTO();  //新建要插入的数据
-            tmp.setDate(timestampToString(cp.getDate()));
-            tmp.setClickTimes(cp.getClickTimes());
-
             String category = cp.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
             if(resultList.containsKey(category)){
-                resultList.get(category).add(tmp);
+                Integer tmp = resultList.get(category);
+                tmp += cp.getClickTimes();
+                resultList.replace(category, tmp);
             }
             else{
-                List<PopularityDTO> tmpList = new ArrayList<>();
-                tmpList.add(tmp);
-                resultList.put(category, tmpList);
+                resultList.put(category, cp.getClickTimes());
             }
         }
 
@@ -92,7 +88,6 @@ public class HistoryController {
             InterestDTO tmp = new InterestDTO();  //新建要插入的数据
             tmp.setDate(timestampToString(ui.getDate()));
             tmp.setInterestClicks(ui.getInterestClicks());
-
             String category = ui.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
             if(resultList.containsKey(category)){
                 resultList.get(category).add(tmp);
@@ -103,7 +98,7 @@ public class HistoryController {
                 resultList.put(category, tmpList);
             }
         }
-        return Result.success(uiList);
+        return Result.success(resultList);
     }
 
     @GetMapping("/category-interest")
@@ -129,7 +124,7 @@ public class HistoryController {
                 resultList.put(category, tmpList);
             }
         }
-        return Result.success(ciList);
+        return Result.success(resultList);
     }
 
 }
