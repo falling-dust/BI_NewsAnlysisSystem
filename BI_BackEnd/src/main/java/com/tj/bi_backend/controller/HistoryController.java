@@ -2,7 +2,6 @@ package com.tj.bi_backend.controller;
 
 import com.tj.bi_backend.entity.CategoryInterest;
 import com.tj.bi_backend.entity.CategoryPopularity;
-import com.tj.bi_backend.entity.DTO.CPDTO;
 import com.tj.bi_backend.entity.DTO.PopularityDTO;
 import com.tj.bi_backend.entity.NewsPopularity;
 import com.tj.bi_backend.entity.UserInterest;
@@ -14,8 +13,11 @@ import com.tj.bi_backend.service.IUIService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 
+
+import java.text.ParseException;
 import java.util.*;
 
+import static com.tj.bi_backend.utils.TimeUtils.stringTransfer;
 import static com.tj.bi_backend.utils.TimeUtils.timeTransfer;
 
 @RestController
@@ -52,10 +54,10 @@ public class HistoryController {
 
     @GetMapping("/category-popularity")
     public Result getCategoryPopularity(
-            @RequestParam("startTime") Date startTime,
-            @RequestParam("endTime") Date endTime
+            @RequestParam("startTime") String startTime,
+            @RequestParam("endTime") String endTime
     ){
-        List<CategoryPopularity> cpList = cpService.getByTime(startTime, endTime);  //获取所有的类别兴趣度数据
+        List<CategoryPopularity> cpList = cpService.getByTime(stringTransfer(startTime), stringTransfer(endTime));  //获取所有的类别兴趣度数据
         if(cpList.isEmpty()){
             return Result.error();
         }

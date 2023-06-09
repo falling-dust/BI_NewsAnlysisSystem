@@ -18,7 +18,9 @@ public class CPService extends ServiceImpl<CPMapper, CategoryPopularity> impleme
     @Override
     public List<CategoryPopularity> getByTime(Date startTime, Date endTime){
         QueryWrapper<CategoryPopularity> wrapper = new QueryWrapper<>();
-        wrapper.between("date", startTime, endTime);
+        wrapper
+                .between("date", startTime, endTime)
+                .orderByAsc("date");
         return list(wrapper);
     }
 }
