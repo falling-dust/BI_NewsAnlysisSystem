@@ -2,6 +2,7 @@ package com.tj.bi_backend.controller;
 
 import com.tj.bi_backend.entity.CategoryInterest;
 import com.tj.bi_backend.entity.CategoryPopularity;
+import com.tj.bi_backend.entity.DTO.InterestDTO;
 import com.tj.bi_backend.entity.DTO.PopularityDTO;
 import com.tj.bi_backend.entity.NewsPopularity;
 import com.tj.bi_backend.entity.UserInterest;
