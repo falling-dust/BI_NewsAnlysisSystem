@@ -17,7 +17,7 @@ public class CPService extends ServiceImpl<CPMapper, CategoryPopularity> impleme
     @Resource
     private CPMapper cpMapper;
     @Override
-    public List<CategoryPopularity> getByTime(Timestamp startTime, Timestamp endTime){
+    public List<CategoryPopularity> getByTime(Date startTime, Date endTime){
         QueryWrapper<CategoryPopularity> wrapper = new QueryWrapper<>();
         wrapper
                 .between("date", startTime, endTime)

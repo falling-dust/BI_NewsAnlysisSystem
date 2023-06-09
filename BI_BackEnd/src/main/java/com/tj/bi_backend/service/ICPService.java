@@ -8,5 +8,5 @@ import java.util.Date;
 import java.util.List;
 
 public interface ICPService extends IService<CategoryPopularity> {
-    List<CategoryPopularity> getByTime(Timestamp startTime, Timestamp endTime);
+    List<CategoryPopularity> getByTime(Date startTime, Date endTime);
 }
