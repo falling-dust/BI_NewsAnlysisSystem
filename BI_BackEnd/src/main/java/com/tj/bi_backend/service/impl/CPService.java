@@ -8,6 +8,7 @@ import com.tj.bi_backend.service.ICPService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class CPService extends ServiceImpl<CPMapper, CategoryPopularity> impleme
     @Resource
     private CPMapper cpMapper;
     @Override
-    public List<CategoryPopularity> getByTime(Date startTime, Date endTime){
+    public List<CategoryPopularity> getByTime(Timestamp startTime, Timestamp endTime){
         QueryWrapper<CategoryPopularity> wrapper = new QueryWrapper<>();
         wrapper
                 .between("date", startTime, endTime)
