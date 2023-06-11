@@ -1,6 +1,7 @@
 package com.tj.bi_backend.controller;
 
 import com.tj.bi_backend.entity.*;
+import com.tj.bi_backend.entity.DTO.ClickShowDTO;
 import com.tj.bi_backend.entity.DTO.InterestDTO;
 import com.tj.bi_backend.entity.DTO.ClicksMutilSearchDTO;
 import com.tj.bi_backend.entity.DTO.PopularityDTO;
@@ -127,11 +128,31 @@ public class HistoryController {
         return Result.success(resultList);
     }
 
-    @GetMapping("/multi-clicks")
+    @PostMapping("/multi-clicks")
     public Result getClickHistory(@RequestBody ClicksMutilSearchDTO clicksMutilSearchDTO) {
         List<Clicks> clicksList = clickService.getByMulti(clicksMutilSearchDTO.getUserId(), stringToDate(clicksMutilSearchDTO.getDate()));
+        List<ClickShowDTO> resList = new ArrayList<>();
 
-        return Result.success();
+        for(Clicks c : clicksList){
+            News news = newsService.getByNewsId(c.getNewsId());
+            if(news.getCategory().equals(clicksMutilSearchDTO.getCategory())){
+                int titleLength = news.getHeadline().length();
+                if(titleLength >= clicksMutilSearchDTO.getMinTitle() && titleLength <= clicksMutilSearchDTO.getMaxTitle()){
+                    int contentLength = news.getNewsBody().length();
+                    if(contentLength >= clicksMutilSearchDTO.getMinContent() && contentLength <= clicksMutilSearchDTO.getMaxContent()){
+                        ClickShowDTO clickShowDTO = new ClickShowDTO();
+                        clickShowDTO.setDate(timestampToString(c.getExposureTime()));
+                        clickShowDTO.setTopic(news.getTopic());
+                        clickShowDTO.setTitle(news.getHeadline());
+                        clickShowDTO.setContent(news.getNewsBody());
+                        clickShowDTO.setUserId(c.getUserId());
 
+                        resList.add(clickShowDTO);
+                    }
+                }
+            }
+        }
+
+        return Result.success(resList);
     }
 }

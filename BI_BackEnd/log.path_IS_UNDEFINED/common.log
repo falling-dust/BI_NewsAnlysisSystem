@@ -124,3 +124,15 @@
  2023-06-11 14:34:12 c.z.h.HikariDataSource 123 [INFO] HikariPool-1 - Start completed.
  2023-06-11 14:35:44 c.z.h.HikariDataSource 350 [INFO] HikariPool-1 - Shutdown initiated...
  2023-06-11 14:35:44 c.z.h.HikariDataSource 352 [INFO] HikariPool-1 - Shutdown completed.
+2023-06-11 17:54:21 c.t.b.BiBackEndApplication 51 [INFO] Starting BiBackEndApplication using Java 17.0.7 with PID 19736 (C:\Users\31294\Desktop\高程作业\商务智能案例分析\BI_NewsAnlysisSystem\BI_BackEnd\target\classes started by 31294 in C:\Users\31294\Desktop\高程作业\商务智能案例分析\BI_NewsAnlysisSystem\BI_BackEnd)
+ 2023-06-11 17:54:21 c.t.b.BiBackEndApplication 633 [INFO] No active profile set, falling back to 1 default profile: "default"
+ 2023-06-11 17:54:22 o.s.b.w.e.t.TomcatWebServer 108 [INFO] Tomcat initialized with port(s): 9090 (http)
+ 2023-06-11 17:54:22 o.a.c.h.Http11NioProtocol 173 [INFO] Initializing ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 17:54:22 o.a.c.c.StandardService 173 [INFO] Starting service [Tomcat]
+ 2023-06-11 17:54:22 o.a.c.c.StandardEngine 173 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+ 2023-06-11 17:54:22 o.a.c.c.C.[.[.[/] 173 [INFO] Initializing Spring embedded WebApplicationContext
+ 2023-06-11 17:54:22 o.s.b.w.s.c.ServletWebServerApplicationContext 291 [INFO] Root WebApplicationContext: initialization completed in 785 ms
+ 2023-06-11 17:54:23 o.a.c.h.Http11NioProtocol 173 [INFO] Starting ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 17:54:23 o.s.b.w.e.t.TomcatWebServer 220 [INFO] Tomcat started on port(s): 9090 (http) with context path ''
+ 2023-06-11 17:54:23 c.t.b.BiBackEndApplication 57 [INFO] Started BiBackEndApplication in 1.719 seconds (process running for 2.043)
+ 
