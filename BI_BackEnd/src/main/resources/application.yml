@@ -29,5 +29,7 @@ mybatis-plus:
 
 
 
+log:
+  path: ./log
 
 

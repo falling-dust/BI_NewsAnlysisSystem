@@ -1,0 +1,172 @@
+2023-06-11 18:00:57 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:00:57 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:00:57 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:01:00 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:01:00 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:01:00 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:01:03 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:01:03 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:01:03 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:06 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:06 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:06 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:09 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:09 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:09 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:12 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:12 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:12 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:15 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:15 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:15 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:18 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:18 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:18 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:21 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:21 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:21 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:24 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:24 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:24 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:27 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:27 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:27 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:30 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:30 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:30 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:33 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:33 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:33 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:36 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:36 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:36 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:39 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:39 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:39 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:42 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:42 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:42 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:45 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:45 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:45 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:48 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:48 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:48 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:51 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:51 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:51 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:54 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:54 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:54 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:06:57 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:06:57 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:06:57 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:00 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:00 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:00 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:03 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:03 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:03 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:06 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:06 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:06 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:09 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:09 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:09 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:12 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:12 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:12 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:15 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:15 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:15 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:18 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:18 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:18 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:21 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:21 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:21 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:24 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:24 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:24 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:27 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:27 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:27 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:30 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:30 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:30 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:33 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:33 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:33 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:36 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:36 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:36 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:48 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:48 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:48 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:51 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:51 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:51 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:54 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:54 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:54 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:07:57 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:07:57 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:07:57 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:00 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:00 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:00 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:03 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:03 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:03 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:06 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:06 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:06 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:09 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:09 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:09 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:12 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:12 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:12 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:15 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:15 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:15 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:18 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:18 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:18 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:21 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:21 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:21 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:24 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:24 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:24 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:27 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:27 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:27 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:30 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:30 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:30 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:33 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:33 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:33 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:36 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:36 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:36 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:39 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:39 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:39 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:42 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:42 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:42 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:45 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:45 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:45 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:48 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:48 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:48 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:51 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:51 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:51 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:08:54 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 18:08:54 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
+ 2023-06-11 18:08:54 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 
