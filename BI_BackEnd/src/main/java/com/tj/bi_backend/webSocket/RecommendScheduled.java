@@ -1,6 +1,8 @@
 package com.tj.bi_backend.webSocket;
 
 import com.alibaba.fastjson.JSON;
+import com.tj.bi_backend.entity.DTO.NewsRecommendDTO;
+import com.tj.bi_backend.entity.News;
 import com.tj.bi_backend.entity.NewsPopularity;
 import com.tj.bi_backend.entity.RealTimeUserInterest;
 import com.tj.bi_backend.entity.UserInterest;
@@ -34,13 +36,13 @@ public class RecommendScheduled {
     /**
      * 每3秒执行一次
      */
-    @Scheduled(cron = "0/3 * * * * ? ") //我这里暂时不需要运行这条定时任务，所以将注解注释了，朋友们运行时记得放开注释啊
+//    @Scheduled(cron = "0/3 * * * * ? ") //我这里暂时不需要运行这条定时任务，所以将注解注释了，朋友们运行时记得放开注释啊
     public void nowOnline() {
         System.err.println("*********   首页定时任务执行   **************");
 
         CopyOnWriteArraySet<WebSocketUtils> webSocketSet = WebSocketUtils.getWebSocketSet();  //获取客户端信息
 
-        List<String> resList = new ArrayList<>();
+        List<NewsRecommendDTO> resList = new ArrayList<>();
 
         WebSocketUtils.setTargetUserId("U153189");
 
@@ -54,21 +56,32 @@ public class RecommendScheduled {
                 ciList.add(uiList.get(i).getCategory());
             }
 
-            for(String category : ciList){
-                List<NewsPopularity> npList = npService.getPopNewsByCategory(category);
-                for(int i = 0; i < 3 && i < npList.size(); i++){
-                    resList.add(npList.get(i).getNewsId());
+            if(!ciList.equals(WebSocketUtils.getCiList())){ //如果推荐结果和上次不同，则进行推荐，推荐列表刷新
+                WebSocketUtils.setCiList(ciList);
+
+                for(String category : ciList){
+                    List<NewsPopularity> npList = npService.getPopNewsByCategory(category);
+                    for(int i = 0; i < 3 && i < npList.size(); i++){
+                        News news = newsService.getByNewsId(npList.get(i).getNewsId());
+                        NewsRecommendDTO newsRecommendDTO = new NewsRecommendDTO();
+                        newsRecommendDTO.setNewsId(news.getNewsId());
+                        newsRecommendDTO.setTopic(news.getTopic());
+                        newsRecommendDTO.setTitle(news.getHeadline());
+                        newsRecommendDTO.setContent(news.getNewsBody());
+
+                        resList.add(newsRecommendDTO);
+                    }
                 }
+
+                webSocketSet.forEach(c -> {
+                    try {
+                        c.sendMessage(JSON.toJSONString(resList));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
             }
         }
-
-        webSocketSet.forEach(c -> {
-            try {
-                c.sendMessage(JSON.toJSONString(resList));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
 
         System.err.println("/n 首页定时任务完成.......");
     }

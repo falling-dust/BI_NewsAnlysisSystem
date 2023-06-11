@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @ServerEndpoint(value = "/webSocket")//主要是将目前的类定义成一个websocket服务器端, 注解的值将被用于监听用户连接的终端访问URL地址,客户端可以通过这个URL来连接到WebSocket服务器端
@@ -61,6 +62,16 @@ public class WebSocketUtils {
 
     public static void setTargetUserId(String targetUserId) {
         WebSocketUtils.targetUserId = targetUserId;
+    }
+
+    private static List<String> ciList;
+
+    public static List<String> getCiList() {
+        return ciList;
+    }
+
+    public static void setCiList(List<String> ciList) {
+        WebSocketUtils.ciList = ciList;
     }
 
     @PostConstruct

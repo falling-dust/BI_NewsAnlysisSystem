@@ -4,4 +4,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.tj.bi_backend.entity.News;
 
 public interface INewsService extends IService<News> {
+    News getByNewsId(String newsId);
 }
