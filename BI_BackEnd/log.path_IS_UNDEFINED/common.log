@@ -1,0 +1,59 @@
+2023-06-11 14:19:58 c.t.b.BiBackEndApplication 51 [INFO] Starting BiBackEndApplication using Java 17.0.2 with PID 13732 (C:\Users\mogiven\Desktop\BI\BI_NewsAnlysisSystem\BI_BackEnd\target\classes started by mogiven in C:\Users\mogiven\Desktop\BI\BI_NewsAnlysisSystem\BI_BackEnd)
+ 2023-06-11 14:19:58 c.t.b.BiBackEndApplication 633 [INFO] No active profile set, falling back to 1 default profile: "default"
+ 2023-06-11 14:19:59 o.s.b.w.e.t.TomcatWebServer 108 [INFO] Tomcat initialized with port(s): 9090 (http)
+ 2023-06-11 14:19:59 o.a.c.h.Http11NioProtocol 173 [INFO] Initializing ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 14:19:59 o.a.c.c.StandardService 173 [INFO] Starting service [Tomcat]
+ 2023-06-11 14:19:59 o.a.c.c.StandardEngine 173 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+ 2023-06-11 14:19:59 o.a.c.c.C.[.[.[/] 173 [INFO] Initializing Spring embedded WebApplicationContext
+ 2023-06-11 14:19:59 o.s.b.w.s.c.ServletWebServerApplicationContext 291 [INFO] Root WebApplicationContext: initialization completed in 1325 ms
+ 2023-06-11 14:20:00 o.a.c.h.Http11NioProtocol 173 [INFO] Starting ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 14:20:00 o.s.b.w.e.t.TomcatWebServer 220 [INFO] Tomcat started on port(s): 9090 (http) with context path ''
+ 2023-06-11 14:20:00 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Starting...
+ 2023-06-11 14:20:00 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b42e36d]]
+ 2023-06-11 14:20:00 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Started.
+ 2023-06-11 14:20:00 c.t.b.BiBackEndApplication 57 [INFO] Started BiBackEndApplication in 3.128 seconds (process running for 3.508)
+ 2023-06-11 14:20:01 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Stopping...
+ 2023-06-11 14:20:01 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b42e36d]]
+ 2023-06-11 14:20:01 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Stopped.
+ 2023-06-11 14:20:03 c.t.b.BiBackEndApplication 51 [INFO] Starting BiBackEndApplication using Java 17.0.2 with PID 10288 (C:\Users\mogiven\Desktop\BI\BI_NewsAnlysisSystem\BI_BackEnd\target\classes started by mogiven in C:\Users\mogiven\Desktop\BI\BI_NewsAnlysisSystem\BI_BackEnd)
+ 2023-06-11 14:20:03 c.t.b.BiBackEndApplication 633 [INFO] No active profile set, falling back to 1 default profile: "default"
+ 2023-06-11 14:20:04 o.s.b.w.e.t.TomcatWebServer 108 [INFO] Tomcat initialized with port(s): 9090 (http)
+ 2023-06-11 14:20:04 o.a.c.h.Http11NioProtocol 173 [INFO] Initializing ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 14:20:04 o.a.c.c.StandardService 173 [INFO] Starting service [Tomcat]
+ 2023-06-11 14:20:04 o.a.c.c.StandardEngine 173 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+ 2023-06-11 14:20:04 o.a.c.c.C.[.[.[/] 173 [INFO] Initializing Spring embedded WebApplicationContext
+ 2023-06-11 14:20:04 o.s.b.w.s.c.ServletWebServerApplicationContext 291 [INFO] Root WebApplicationContext: initialization completed in 1247 ms
+ 2023-06-11 14:20:05 o.a.c.h.Http11NioProtocol 173 [INFO] Starting ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 14:20:05 o.s.b.w.e.t.TomcatWebServer 220 [INFO] Tomcat started on port(s): 9090 (http) with context path ''
+ 2023-06-11 14:20:05 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Starting...
+ 2023-06-11 14:20:05 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@13192275]]
+ 2023-06-11 14:20:05 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Started.
+ 2023-06-11 14:20:05 c.t.b.BiBackEndApplication 57 [INFO] Started BiBackEndApplication in 3.091 seconds (process running for 3.504)
+ 2023-06-11 14:21:05 o.s.w.s.c.WebSocketMessageBrokerStats 128 [INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+ 2023-06-11 14:22:42 o.a.c.c.C.[.[.[/] 173 [INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2023-06-11 14:22:42 o.s.w.s.DispatcherServlet 532 [INFO] Initializing Servlet 'dispatcherServlet'
+ 2023-06-11 14:22:42 o.s.w.s.DispatcherServlet 554 [INFO] Completed initialization in 1 ms
+ 2023-06-11 14:27:30 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Stopping...
+ 2023-06-11 14:27:30 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@13192275]]
+ 2023-06-11 14:27:30 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Stopped.
+ 2023-06-11 14:27:50 c.t.b.BiBackEndApplication 51 [INFO] Starting BiBackEndApplication using Java 17.0.2 with PID 13652 (C:\Users\mogiven\Desktop\BI\BI_NewsAnlysisSystem\BI_BackEnd\target\classes started by mogiven in C:\Users\mogiven\Desktop\BI\BI_NewsAnlysisSystem\BI_BackEnd)
+ 2023-06-11 14:27:50 c.t.b.BiBackEndApplication 633 [INFO] No active profile set, falling back to 1 default profile: "default"
+ 2023-06-11 14:27:51 o.s.b.w.e.t.TomcatWebServer 108 [INFO] Tomcat initialized with port(s): 9090 (http)
+ 2023-06-11 14:27:52 o.a.c.h.Http11NioProtocol 173 [INFO] Initializing ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 14:27:52 o.a.c.c.StandardService 173 [INFO] Starting service [Tomcat]
+ 2023-06-11 14:27:52 o.a.c.c.StandardEngine 173 [INFO] Starting Servlet engine: [Apache Tomcat/10.1.8]
+ 2023-06-11 14:27:52 o.a.c.c.C.[.[.[/] 173 [INFO] Initializing Spring embedded WebApplicationContext
+ 2023-06-11 14:27:52 o.s.b.w.s.c.ServletWebServerApplicationContext 291 [INFO] Root WebApplicationContext: initialization completed in 1240 ms
+ 2023-06-11 14:27:53 o.a.c.h.Http11NioProtocol 173 [INFO] Starting ProtocolHandler ["http-nio-9090"]
+ 2023-06-11 14:27:53 o.s.b.w.e.t.TomcatWebServer 220 [INFO] Tomcat started on port(s): 9090 (http) with context path ''
+ 2023-06-11 14:27:53 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Starting...
+ 2023-06-11 14:27:53 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5384ce66]]
+ 2023-06-11 14:27:53 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Started.
+ 2023-06-11 14:27:53 c.t.b.BiBackEndApplication 57 [INFO] Started BiBackEndApplication in 2.905 seconds (process running for 3.252)
+ 2023-06-11 14:28:10 o.a.c.c.C.[.[.[/] 173 [INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2023-06-11 14:28:10 o.s.w.s.DispatcherServlet 532 [INFO] Initializing Servlet 'dispatcherServlet'
+ 2023-06-11 14:28:10 o.s.w.s.DispatcherServlet 554 [INFO] Completed initialization in 1 ms
+ 2023-06-11 14:28:29 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Stopping...
+ 2023-06-11 14:28:29 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5384ce66]]
+ 2023-06-11 14:28:29 o.s.m.s.b.SimpleBrokerMessageHandler 117 [INFO] Stopped.
+ 
