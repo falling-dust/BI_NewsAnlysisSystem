@@ -1,17 +1,12 @@
 package com.tj.bi_backend.controller;
 
-import com.tj.bi_backend.entity.CategoryInterest;
-import com.tj.bi_backend.entity.CategoryPopularity;
+import com.tj.bi_backend.entity.*;
+import com.tj.bi_backend.entity.DTO.ClickShowDTO;
 import com.tj.bi_backend.entity.DTO.InterestDTO;
+import com.tj.bi_backend.entity.DTO.ClicksMutilSearchDTO;
 import com.tj.bi_backend.entity.DTO.PopularityDTO;
-import com.tj.bi_backend.entity.NewsPopularity;
-import com.tj.bi_backend.entity.UserInterest;
 import com.tj.bi_backend.result.Result;
-import com.tj.bi_backend.service.ICIService;
-import com.tj.bi_backend.service.ICPService;
-import com.tj.bi_backend.service.INPService;
-import com.tj.bi_backend.service.IUIService;
-import com.tj.bi_backend.utils.WebSocketUtils;
+import com.tj.bi_backend.service.*;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
@@ -33,6 +28,12 @@ public class HistoryController {
 
     @Resource
     private IUIService uiService;
+
+    @Resource
+    private INewsService newsService;
+
+    @Resource
+    private IClickService clickService;
 
     @GetMapping("/news-popularity")
     public Result getNewsPopularityByNewsId(@RequestParam String newsId){
@@ -127,28 +128,31 @@ public class HistoryController {
         return Result.success(resultList);
     }
 
-    @GetMapping("/news")
-    public Result getNews() {
-        List<CategoryInterest> ciList = ciService.list();
-        if (ciList.isEmpty()) {
-            return Result.error();
-        }
+    @PostMapping("/multi-clicks")
+    public Result getClickHistory(@RequestBody ClicksMutilSearchDTO clicksMutilSearchDTO) {
+        List<Clicks> clicksList = clickService.getByMulti(clicksMutilSearchDTO.getUserId(), stringToDate(clicksMutilSearchDTO.getDate()));
+        List<ClickShowDTO> resList = new ArrayList<>();
 
-        Map<String, List<InterestDTO>> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储
-        for (CategoryInterest ci : ciList) {
-            InterestDTO tmp = new InterestDTO();  //新建要插入的数据
-            tmp.setDate(timestampToString(ci.getDate()));
-            tmp.setInterestClicks(ci.getInterestClicks());
+        for(Clicks c : clicksList){
+            News news = newsService.getByNewsId(c.getNewsId());
+            if(news.getCategory().equals(clicksMutilSearchDTO.getCategory())){
+                int titleLength = news.getHeadline().length();
+                if(titleLength >= clicksMutilSearchDTO.getMinTitle() && titleLength <= clicksMutilSearchDTO.getMaxTitle()){
+                    int contentLength = news.getNewsBody().length();
+                    if(contentLength >= clicksMutilSearchDTO.getMinContent() && contentLength <= clicksMutilSearchDTO.getMaxContent()){
+                        ClickShowDTO clickShowDTO = new ClickShowDTO();
+                        clickShowDTO.setDate(timestampToString(c.getExposureTime()));
+                        clickShowDTO.setTopic(news.getTopic());
+                        clickShowDTO.setTitle(news.getHeadline());
+                        clickShowDTO.setContent(news.getNewsBody());
+                        clickShowDTO.setUserId(c.getUserId());
 
-            String category = ci.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
-            if (resultList.containsKey(category)) {
-                resultList.get(category).add(tmp);
-            } else {
-                List<InterestDTO> tmpList = new ArrayList<>();
-                tmpList.add(tmp);
-                resultList.put(category, tmpList);
+                        resList.add(clickShowDTO);
+                    }
+                }
             }
         }
-        return Result.success(resultList);
+
+        return Result.success(resList);
     }
 }
