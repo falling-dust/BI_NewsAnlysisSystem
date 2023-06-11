@@ -44,8 +44,6 @@ public class RecommendScheduled {
 
         List<NewsRecommendDTO> resList = new ArrayList<>();
 
-        WebSocketUtils.setTargetUserId("U261574");
-
         System.out.println(WebSocketUtils.getTargetUserId());
 
         if(!WebSocketUtils.getTargetUserId().isEmpty()){  //如果尚未设置目标用户，则返回列表为空
