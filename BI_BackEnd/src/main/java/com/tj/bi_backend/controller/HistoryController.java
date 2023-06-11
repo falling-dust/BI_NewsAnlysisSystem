@@ -33,7 +33,7 @@ public class HistoryController {
     private INewsService newsService;
 
     @Resource
-    private IClickService clickService;
+    private IClickHistoryService clickService;
 
     @GetMapping("/news-popularity")
     public Result getNewsPopularityByNewsId(@RequestParam String newsId){
@@ -130,12 +130,17 @@ public class HistoryController {
 
     @PostMapping("/multi-clicks")
     public Result getClickHistory(@RequestBody ClicksMutilSearchDTO clicksMutilSearchDTO) {
-        List<Clicks> clicksList = clickService.getByMulti(clicksMutilSearchDTO.getUserId(), stringToDate(clicksMutilSearchDTO.getDate()));
+        System.out.println(clicksMutilSearchDTO);
+        String userId = clicksMutilSearchDTO.getUserId();
+        String date = clicksMutilSearchDTO.getDate();
+        System.out.println(userId);
+        System.out.println(date);
+        List<ClickHistory> clicksList = clickService.getByMulti(userId, stringToDate(date));
         List<ClickShowDTO> resList = new ArrayList<>();
 
-        for(Clicks c : clicksList){
+        for(ClickHistory c : clicksList){
             News news = newsService.getByNewsId(c.getNewsId());
-            if(news.getCategory().equals(clicksMutilSearchDTO.getCategory())){
+            if(clicksMutilSearchDTO.getCategory().isEmpty() || news.getCategory().equals(clicksMutilSearchDTO.getCategory())){
                 int titleLength = news.getHeadline().length();
                 if(titleLength >= clicksMutilSearchDTO.getMinTitle() && titleLength <= clicksMutilSearchDTO.getMaxTitle()){
                     int contentLength = news.getNewsBody().length();
@@ -144,7 +149,7 @@ public class HistoryController {
                         clickShowDTO.setDate(timestampToString(c.getExposureTime()));
                         clickShowDTO.setTopic(news.getTopic());
                         clickShowDTO.setTitle(news.getHeadline());
-                        clickShowDTO.setContent(news.getNewsBody());
+                        clickShowDTO.setContent(news.getNewsBody().substring(0, 100));
                         clickShowDTO.setUserId(c.getUserId());
 
                         resList.add(clickShowDTO);

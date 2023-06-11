@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/real-time")
 public class RealTimeController {
-    @PostMapping ("/set-user")
+    @GetMapping ("/set-user")
     public Result setTargetUserId(@RequestParam String userId){
         WebSocketUtils.setTargetUserId(userId);
         return Result.success();
