@@ -1,0 +1,13 @@
+INSERT INTO news_popularity (news_id, click_times, date)
+SELECT 
+    news_id, 
+    COUNT(*), 
+    DATE(exposure_time)
+FROM 
+    click_history
+WHERE 
+    dwell_time > 10
+GROUP BY 
+    news_id, DATE(exposure_time)
+ON DUPLICATE KEY UPDATE 
+    click_times = click_times + VALUES(click_times);
