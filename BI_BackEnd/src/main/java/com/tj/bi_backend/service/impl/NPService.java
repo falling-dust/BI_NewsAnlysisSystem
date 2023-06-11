@@ -24,4 +24,15 @@ public class NPService extends ServiceImpl<NPMapper, NewsPopularity> implements 
 
         return list(wrapper);
     }
+
+    @Override
+    public List<NewsPopularity> getPopNewsByCategory(String category){
+        QueryWrapper<NewsPopularity> wrapper = new QueryWrapper<>();
+        wrapper
+                .eq("category", category)
+                .orderByDesc("date")
+                .orderByDesc("click_times");
+
+        return list(wrapper);
+    }
 }
