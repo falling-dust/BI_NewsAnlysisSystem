@@ -10,6 +10,7 @@ import com.tj.bi_backend.service.IRIUIService;
 import com.tj.bi_backend.service.impl.NPService;
 import com.tj.bi_backend.service.impl.NewsService;
 import com.tj.bi_backend.utils.WebSocketUtils;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -24,13 +25,13 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Component
 public class RecommendScheduled {
 
-    @Autowired
+    @Resource
     private IRIUIService iriuiService;
 
-    @Autowired
+    @Resource
     private NPService npService;
 
-    @Autowired
+    @Resource
     private NewsService newsService;
 
     /**
@@ -65,7 +66,7 @@ public class RecommendScheduled {
                         newsRecommendDTO.setNewsId(news.getNewsId());
                         newsRecommendDTO.setTopic(news.getTopic());
                         newsRecommendDTO.setTitle(news.getHeadline());
-                        newsRecommendDTO.setContent(news.getNewsBody());
+                        newsRecommendDTO.setContent(news.getNewsBody().substring(0, 100));
 
                         resList.add(newsRecommendDTO);
                     }
@@ -78,8 +79,12 @@ public class RecommendScheduled {
                         e.printStackTrace();
                     }
                 });
+
+                System.out.println(WebSocketUtils.getWebSocketSet());
             }
         }
+
+
 
         System.err.println("/n 首页定时任务完成.......");
     }

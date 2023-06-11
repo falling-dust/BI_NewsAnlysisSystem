@@ -5,9 +5,10 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Data
-public class Clicks {
+public class ClickHistory {
     private String userId;
     private String newsId;
     private Integer dwellTime;
     private Timestamp exposureTime;
+    private Timestamp exposureDate;
 }
