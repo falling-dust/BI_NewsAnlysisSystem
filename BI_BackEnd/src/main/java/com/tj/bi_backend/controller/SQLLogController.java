@@ -22,8 +22,8 @@ public class SQLLogController {
     @Resource
     private ISQLLogService sqlLogService;
 
-    @GetMapping
-    public Result<List<SQLLogEntry>> getSQLLogs() {
+    @GetMapping("")
+    public Result getSQLLogs() {
         List<SQLLogEntry> logEntries = sqlLogService.parseSQLLogFile(logPath+ LOG_FILE_NAME);
         if (logEntries.isEmpty()){
             return Result.error();
