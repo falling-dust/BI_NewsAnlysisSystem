@@ -6,16 +6,12 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 
-/**
- * @author mapleleaf
- * @date 2023年06月08日19:04
- */
 @Data
-public class NewsPopularity {
+public class RealTimeUserInterest {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
-    private String newsId;
+    private String userId;
     private String category;
-    private Timestamp date;
-    private Integer clickTimes;
+    private Timestamp timePeriod;
+    private Integer interestClicks;
 }

@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface IUIService extends IService<UserInterest> {
     List<UserInterest> getByUserId(String userId);
+
 }
