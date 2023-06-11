@@ -11,6 +11,7 @@ import com.tj.bi_backend.service.ICIService;
 import com.tj.bi_backend.service.ICPService;
 import com.tj.bi_backend.service.INPService;
 import com.tj.bi_backend.service.IUIService;
+import com.tj.bi_backend.utils.WebSocketUtils;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
@@ -102,23 +103,22 @@ public class HistoryController {
     }
 
     @GetMapping("/category-interest")
-    public Result getCategoryInterest(){
+    public Result getCategoryInterest() {
         List<CategoryInterest> ciList = ciService.list();
-        if(ciList.isEmpty()){
+        if (ciList.isEmpty()) {
             return Result.error();
         }
 
         Map<String, List<InterestDTO>> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储
-        for(CategoryInterest ci : ciList){
+        for (CategoryInterest ci : ciList) {
             InterestDTO tmp = new InterestDTO();  //新建要插入的数据
             tmp.setDate(timestampToString(ci.getDate()));
             tmp.setInterestClicks(ci.getInterestClicks());
 
             String category = ci.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
-            if(resultList.containsKey(category)){
+            if (resultList.containsKey(category)) {
                 resultList.get(category).add(tmp);
-            }
-            else{
+            } else {
                 List<InterestDTO> tmpList = new ArrayList<>();
                 tmpList.add(tmp);
                 resultList.put(category, tmpList);
@@ -127,4 +127,28 @@ public class HistoryController {
         return Result.success(resultList);
     }
 
+    @GetMapping("/news")
+    public Result getNews() {
+        List<CategoryInterest> ciList = ciService.list();
+        if (ciList.isEmpty()) {
+            return Result.error();
+        }
+
+        Map<String, List<InterestDTO>> resultList = new HashMap<>();  //将数据处理为前端需要的格式，此处用字典存储
+        for (CategoryInterest ci : ciList) {
+            InterestDTO tmp = new InterestDTO();  //新建要插入的数据
+            tmp.setDate(timestampToString(ci.getDate()));
+            tmp.setInterestClicks(ci.getInterestClicks());
+
+            String category = ci.getCategory();  //判断类型是否在字典的关键词里，如果在则直接插入，如果没有则新建列表后插入
+            if (resultList.containsKey(category)) {
+                resultList.get(category).add(tmp);
+            } else {
+                List<InterestDTO> tmpList = new ArrayList<>();
+                tmpList.add(tmp);
+                resultList.put(category, tmpList);
+            }
+        }
+        return Result.success(resultList);
+    }
 }
