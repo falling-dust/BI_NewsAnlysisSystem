@@ -23,14 +23,14 @@ object OdsBaseLogApp {
       .set("spark.testing.reservedMemory","0")
 
     //准备数据库连接配置
-    val url = "jdbc:mysql://Master:3306/BI"
+    val url = "jdbc:mysql://110.42.189.226:3306/BI_DATABASE"
     val username = "yfy"
     val password = "yfy123"
 
     val ssc:StreamingContext =new StreamingContext(sparkConf,Seconds(5))
 
     //从kafka中消费数据
-    val topicName :String ="BI_News"
+    val topicName :String ="BI_News1"
     val groupId:String="ODS_BASE_LOG_GROUP_1"
     val kafkaDStream:InputDStream[ConsumerRecord[String,String]] = MyKafkaUtils.getKafkaDStream(ssc, topicName, groupId)
 
@@ -49,38 +49,63 @@ object OdsBaseLogApp {
       }
     }
 
-
     // Task2：统计用户的兴趣
     stringDStream.foreachRDD { rdd =>
       rdd.foreachPartition { partitionOfRecords =>
         val connection: Connection = DriverManager.getConnection(url, username, password)
-        val statement: PreparedStatement = connection.prepareStatement("INSERT INTO real_time_user_interest (user_id, category, time_period, interest_clicks) VALUES (?, ?, ?, ?)")
+        val selectStatement: PreparedStatement = connection.prepareStatement("SELECT interest_clicks FROM real_time_user_interest WHERE user_id = ? AND category = ? AND time_period = ?")
+        val updateStatement: PreparedStatement = connection.prepareStatement("UPDATE real_time_user_interest SET interest_clicks = ? WHERE user_id = ? AND category = ? AND time_period = ?")
+        val insertStatement: PreparedStatement = connection.prepareStatement("INSERT INTO real_time_user_interest (user_id, category, time_period, interest_clicks) VALUES (?, ?, ?, ?)")
 
         val parseRealTimeClickFunc = parseRealTimeClick _
         val getNewsCategoryFunc = getNewsCategory _
 
         partitionOfRecords.foreach { record =>
           val realTimeClick = parseRealTimeClickFunc(record) //解析日志数据
-          if (realTimeClick.dwellTime > 5) {//超过5s的都算作感兴趣，筛除误触的点击
+          //println(realTimeClick)
+          if (realTimeClick.dwellTime > 5) { //超过5s的都算作感兴趣，筛除误触的点击
             val category = getNewsCategoryFunc(realTimeClick.newsId, connection) //去数据库查找电影种类
             val timePeriod = getCurrentHour(realTimeClick.endTime) // 使用 endTime 转换为精度到小时的时间字符串
 
-            val interestClicks = calculateInterestClicks(realTimeClick.dwellTime, connection, realTimeClick.userId, category, timePeriod)
+            // 设置参数并执行查询语句
+            selectStatement.setString(1, realTimeClick.userId)
+            selectStatement.setString(2, category)
+            selectStatement.setString(3, timePeriod)
+            val resultSet = selectStatement.executeQuery()
 
-            // 设置参数并插入数据库
-            statement.setString(1, realTimeClick.userId)
-            statement.setString(2, category)
-            statement.setString(3, timePeriod)
-            statement.setInt(4, interestClicks)
+            if (resultSet.next()) {
+              // 已存在相同记录，执行更新语句
+              val existingInterestClicks = resultSet.getInt("interest_clicks")
+              val updatedInterestClicks = existingInterestClicks + 1
 
-            statement.executeUpdate()
+              // 设置参数并执行更新语句
+              updateStatement.setInt(1, updatedInterestClicks)
+              updateStatement.setString(2, realTimeClick.userId)
+              updateStatement.setString(3, category)
+              updateStatement.setString(4, timePeriod)
+              updateStatement.executeUpdate()
+            } else {
+              // 不存在相同记录，执行插入语句
+              val interestClicks = 1
+              // 设置参数并执行插入语句
+              insertStatement.setString(1, realTimeClick.userId)
+              insertStatement.setString(2, category)
+              insertStatement.setString(3, timePeriod)
+              insertStatement.setInt(4, interestClicks)
+              insertStatement.executeUpdate()
+            }
+
+            resultSet.close()
           }
         }
 
-        statement.close()
+        selectStatement.close()
+        updateStatement.close()
+        insertStatement.close()
         connection.close()
       }
     }
+
 
     ssc.start()
     ssc.awaitTermination()
@@ -151,21 +176,22 @@ object OdsBaseLogApp {
     category
   }
 
-  def calculateInterestClicks(dwellTime: Int, connection: Connection, userId: String, category: String, timePeriod: String): Int = {
-    // 查询数据库中当前用户、分类、时间段的累计点击次数
-    val selectStatement: PreparedStatement = connection.prepareStatement("SELECT interest_clicks FROM real_time_user_interest WHERE user_id = ? AND category = ? AND time_period = ?")
-    selectStatement.setString(1, userId)
-    selectStatement.setString(2, category)
-    selectStatement.setString(3, timePeriod)
-
-    val resultSet: ResultSet = selectStatement.executeQuery()
-
-    if (resultSet.next()) {
-      val previousClicks = resultSet.getInt("interest_clicks")
-      previousClicks + 1 // 累计点击次数加1
-    } else {
-      1 // 首次点击，返回点击次数1
-    }
-  }
+    //更新逻辑写在函数中
+//  def calculateInterestClicks(dwellTime: Int, connection: Connection, userId: String, category: String, timePeriod: String): Int = {
+//    // 查询数据库中当前用户、分类、时间段的累计点击次数
+//    val selectStatement: PreparedStatement = connection.prepareStatement("SELECT interest_clicks FROM real_time_user_interest WHERE user_id = ? AND category = ? AND time_period = ?")
+//    selectStatement.setString(1, userId)
+//    selectStatement.setString(2, category)
+//    selectStatement.setString(3, timePeriod)
+//
+//    val resultSet: ResultSet = selectStatement.executeQuery()
+//
+//    if (resultSet.next()) {
+//      val previousClicks = resultSet.getInt("interest_clicks")
+//      previousClicks + 1 // 累计点击次数加1
+//    } else {
+//      1 // 首次点击，返回点击次数1
+//    }
+//  }
 
 }
