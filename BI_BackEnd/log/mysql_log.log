@@ -169,4 +169,100 @@
  2023-06-11 18:08:54 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
  2023-06-11 18:08:54 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U153189(String)
  2023-06-11 18:08:54 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 0
+ 2023-06-11 18:51:37 c.t.b.m.C.selectList 135 [DEBUG] ==>  Preparing: SELECT id,category,date,click_times FROM category_popularity WHERE (date BETWEEN ? AND ?) ORDER BY date ASC
+ 2023-06-11 18:51:37 c.t.b.m.C.selectList 135 [DEBUG] ==> Parameters: 2019-06-13 00:00:00.0(Timestamp), 2019-07-11 00:00:00.0(Timestamp)
+ 2023-06-11 18:51:38 c.t.b.m.C.selectList 135 [DEBUG] <==      Total: 418
+ 2023-06-11 19:03:48 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:03:48 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:03:48 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:03:48 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT id,news_id,category,date,click_times FROM news_popularity WHERE (category = ?) ORDER BY date DESC,click_times DESC
+ 2023-06-11 19:03:48 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: finance(String)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 13238
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N106267(String)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N23065(String)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N114442(String)
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT id,news_id,category,date,click_times FROM news_popularity WHERE (category = ?) ORDER BY date DESC,click_times DESC
+ 2023-06-11 19:03:49 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: news(String)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 33189
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N90668(String)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N74300(String)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N73122(String)
+ 2023-06-11 19:03:50 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:03:51 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:03:51 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:03:51 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:03:54 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:03:54 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:03:54 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:39 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:39 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:39 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:39 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT id,news_id,category,date,click_times FROM news_popularity WHERE (category = ?) ORDER BY date DESC,click_times DESC
+ 2023-06-11 19:04:39 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: finance(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 13238
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N106267(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N23065(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N114442(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT id,news_id,category,date,click_times FROM news_popularity WHERE (category = ?) ORDER BY date DESC,click_times DESC
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: news(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 33189
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N90668(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N74300(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==>  Preparing: SELECT news_id,category,topic,headline,news_body FROM news WHERE (news_id = ?)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] ==> Parameters: N73122(String)
+ 2023-06-11 19:04:40 c.t.b.m.N.selectList 135 [DEBUG] <==      Total: 1
+ 2023-06-11 19:04:42 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:42 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:42 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:45 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:45 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:45 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:48 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:48 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:48 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:51 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:51 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:51 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:54 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:54 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:54 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:04:57 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:04:57 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:04:57 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:05:00 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:05:00 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:05:00 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:05:03 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:05:03 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:05:03 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:05:06 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:05:06 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:05:06 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:05:09 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:05:09 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:05:09 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
+ 2023-06-11 19:05:12 c.t.b.m.R.selectList 135 [DEBUG] ==>  Preparing: SELECT id,user_id,category,time_period,interest_clicks FROM real_time_user_interest WHERE (user_id = ?) ORDER BY time_period DESC
+ 2023-06-11 19:05:12 c.t.b.m.R.selectList 135 [DEBUG] ==> Parameters: U261574(String)
+ 2023-06-11 19:05:12 c.t.b.m.R.selectList 135 [DEBUG] <==      Total: 3
  

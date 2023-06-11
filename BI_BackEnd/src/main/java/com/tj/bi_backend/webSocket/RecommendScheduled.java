@@ -36,13 +36,15 @@ public class RecommendScheduled {
     /**
      * 每3秒执行一次
      */
-//    @Scheduled(cron = "0/3 * * * * ? ") //我这里暂时不需要运行这条定时任务，所以将注解注释了，朋友们运行时记得放开注释啊
+    @Scheduled(cron = "0/3 * * * * ? ") //我这里暂时不需要运行这条定时任务，所以将注解注释了，朋友们运行时记得放开注释啊
     public void nowOnline() {
         System.err.println("*********   首页定时任务执行   **************");
 
         CopyOnWriteArraySet<WebSocketUtils> webSocketSet = WebSocketUtils.getWebSocketSet();  //获取客户端信息
 
         List<NewsRecommendDTO> resList = new ArrayList<>();
+
+        WebSocketUtils.setTargetUserId("U261574");
 
         System.out.println(WebSocketUtils.getTargetUserId());
 
